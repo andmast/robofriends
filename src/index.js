@@ -8,7 +8,10 @@ import registerServiceWorker from "./registerServiceWorker";
 import "tachyons";
 import { searchRobots } from "./reducers";
 
-const store = createStore(searchRobots);
+const store = createStore(
+  searchRobots,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
   <Provider store={store}>
