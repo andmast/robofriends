@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { createStore, compose, applyMiddleware, combineReducers } from "redux";
 import thunkMiddleWare from "redux-thunk";
 import "./index.css";
 import App from "./containers/App";
-import registerServiceWorker from "./registerServiceWorker";
 import "tachyons";
 import { searchRobots, requestRobots } from "./reducers";
 
@@ -25,4 +25,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-registerServiceWorker();
+serviceWorker.register();
