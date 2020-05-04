@@ -4,7 +4,7 @@ class CounterButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0
+      count: 0,
     };
   }
 
@@ -16,14 +16,14 @@ class CounterButton extends Component {
   }
 
   updateCount = () => {
-    this.setState(state => {
+    this.setState((state) => {
       return { count: state.count + 1 };
     });
   };
 
   render() {
     return (
-      <button color={this.props.color} onClick={this.updateCount}>
+      <button id="counter" color={this.props.color} onClick={this.updateCount}>
         Count: {this.state.count}
       </button>
     );
