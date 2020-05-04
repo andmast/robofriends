@@ -2,7 +2,7 @@ import { shallow } from "enzyme";
 import React from "react";
 import CounterButton from "./CounterButton";
 
-it("expect to render Counter Componet", () => {
+it("expect to render CounterButton Componet", () => {
   const mockColor = "red";
   expect(shallow(<CounterButton color={mockColor} />)).toMatchSnapshot();
 });

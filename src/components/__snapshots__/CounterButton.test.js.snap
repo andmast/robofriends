@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`expect to render Counter Componet 1`] = `
+exports[`expect to render CounterButton Componet 1`] = `
 <button
   color="red"
   id="counter"
