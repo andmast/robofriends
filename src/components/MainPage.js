@@ -28,7 +28,7 @@ class MainPage extends Component {
         <Header />
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
-          <CardList robots={this.filterRobots} />
+          <CardList robots={this.filterRobots()} />
         </Scroll>
       </div>
     );
