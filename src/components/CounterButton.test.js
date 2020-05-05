@@ -18,7 +18,5 @@ it("correctly increment counter", () => {
 it("correctly passed prop of red", () => {
   const mockColor = "red";
   const wrapper = shallow(<CounterButton color={mockColor} />);
-
-  wrapper.find(`[id="counter"]`).simulate("click");
   expect(wrapper.props().color).toEqual("red");
 });

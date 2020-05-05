@@ -8,7 +8,7 @@ exports[`Expect to render Mainpage Componet 1`] = `
   <SearchBox />
   <Scroll>
     <CardList
-      robots={[Function]}
+      robots={Array []}
     />
   </Scroll>
 </div>
