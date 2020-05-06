@@ -7,9 +7,11 @@ exports[`Expect to render Mainpage Componet 1`] = `
   <Header />
   <SearchBox />
   <Scroll>
-    <CardList
-      robots={Array []}
-    />
+    <ErrorBoundary>
+      <CardList
+        robots={Array []}
+      />
+    </ErrorBoundary>
   </Scroll>
 </div>
 `;

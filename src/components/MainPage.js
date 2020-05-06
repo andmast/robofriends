@@ -3,6 +3,8 @@ import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
 import Header from "../components/Header";
+import ErrorBoundry from "./ErrorBoundry";
+
 import "./MainPage.css";
 
 class MainPage extends Component {
@@ -21,14 +23,18 @@ class MainPage extends Component {
   render() {
     const { onSearchChange, isPending } = this.props;
 
-    return isPending ? (
-      <h1>Loading</h1>
-    ) : (
+    return (
       <div className="tc">
         <Header />
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
-          <CardList robots={this.filterRobots()} />
+          {isPending ? (
+            <h1>Loading</h1>
+          ) : (
+            <ErrorBoundry>
+              <CardList robots={this.filterRobots()} />
+            </ErrorBoundry>
+          )}
         </Scroll>
       </div>
     );
